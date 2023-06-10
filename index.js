@@ -1,7 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT || 3000
 
 const app = express();
 
@@ -12,5 +12,5 @@ app.use(homeRouter);
 app.use(converRouter);
 
 app.listen(port, ()=>{
-    console.log(`lisening${port}1....`);
+    console.log(`lisening ${port}....`);
 })
